@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KingPing.org</title>
+    <title>About - KingPing.org</title>
     <style>
         body {
             margin: 0;
@@ -12,7 +12,7 @@
             color: #fff;
         }
 
-        /* Navbar styles */
+        /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -47,17 +47,21 @@
             color: #f39c12;
         }
 
-        /* Centered heading on the page */
+        /* Content */
         .main-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100vh - 70px); /* full height minus navbar */
-            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: auto;
         }
 
         .main-content h1 {
-            font-size: 4rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -65,18 +69,29 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><font color="yellow">KingPing</font>.<font color="red">org</font></div>
+        <div class="logo">KingPing.org</div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main content -->
-    <h1>&nbsp;<u>What is this?</u></h1>
-	<p><b>&nbsp;welcome to the site of robin cruiser</b></p>
+    <div class="main-content">
+        <h1>About KingPing.org</h1>
+        <p>
+            Welcome to KingPing.org! Our mission is to provide useful content, guides, and projects 
+            for anyone interested in technology and web development. We aim to make learning 
+            programming and web design easy and fun.
+        </p>
+        <p>
+            This website is built with simplicity and clarity in mind. We focus on providing 
+            clean, modern designs and easy-to-navigate layouts so you can enjoy your browsing 
+            experience. Stay tuned for more updates and tutorials!
+        </p>
+    </div>
 
 </body>
 </html>
