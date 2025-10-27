@@ -47,7 +47,7 @@
             color: #f39c12;
         }
 
-        /* Content */
+        /* Main content */
         .main-content {
             padding: 4rem 2rem;
             max-width: 900px;
@@ -63,6 +63,27 @@
             font-size: 1.2rem;
             line-height: 1.8;
         }
+
+        /* Search bar */
+        .search-box {
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        h2 {
+            margin-top: 100px;
+            scroll-margin-top: 100px; /* ensures heading visible below navbar */
+        }
     </style>
 </head>
 <body>
@@ -73,7 +94,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Help</a></li>
-            <li><a href="#">Our team</a></li>
+            <li><a href="#">Our Team</a></li>
         </ul>
     </nav>
 
@@ -90,7 +111,49 @@
             clean, modern designs and easy-to-navigate layouts so you can enjoy your browsing 
             experience. Stay tuned for more updates and tutorials!
         </p>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search for a section... (e.g. mission, vision, team)">
+        </div>
+
+        <!-- Example sections to jump to -->
+        <section>
+            <h2 id="mission">Our Mission</h2>
+            <p>To empower creators and developers with clear, helpful content and tools.</p>
+        </section>
+
+        <section>
+            <h2 id="vision">Our Vision</h2>
+            <p>To be a leading source of knowledge and creativity in the digital space.</p>
+        </section>
+
+        <section>
+            <h2 id="team">Our Team</h2>
+            <p>The KingPing.org team is made up of passionate designers, developers, and tech enthusiasts.</p>
+        </section>
+
+        <section>
+            <h2 id="contact">Contact Us</h2>
+            <p>Reach out to us anytime for collaborations, support, or feedback!</p>
+        </section>
     </div>
+
+    <!-- Script -->
+    <script>
+        const search = document.getElementById("search");
+        search.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                const query = search.value.toLowerCase().trim();
+                const heading = document.querySelector(`h2[id="${query}"]`);
+                if (heading) {
+                    heading.scrollIntoView({ behavior: "smooth" });
+                } else {
+                    alert("No matching section found!");
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
